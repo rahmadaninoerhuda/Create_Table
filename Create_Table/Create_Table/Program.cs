@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Koneksi
 {
-    class Program
+    class Program//program
     {
         static void Main(string[] args)
         {
