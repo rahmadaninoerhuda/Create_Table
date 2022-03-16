@@ -12,7 +12,7 @@ namespace Koneksi
     {
         static void Main(string[] args)
         {
-            new Program().Connecting();
+            new Program().CreateTable();
         }
 
         public void Connecting()
@@ -35,9 +35,9 @@ namespace Koneksi
                 con = new SqlConnection ("data source=LAPTOP-I5CF3Q9T;" +
                 "database=ProdiTI;Integrated security = TRUE");
                 con.Open();
-
+                
                 SqlCommand cm = new SqlCommand("create table Mahasiswa_Coba (NIM char(12) not null primary key," +
-                    "Nama Varchar (50), Alamat varchar(255), Jenis_Kelamin char(1))", con);
+                    "Nama Varchar (50), Alamat varchar(255), Jenis_Kelamin char(1))", con);//Command memmbuat atribut tabel
                 cm.ExecuteNonQuery();
 
                 Console.WriteLine("Tabel suksses dibuat!");
